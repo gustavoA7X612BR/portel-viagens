@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portel-viagens.vercel.app
+
+# Sitemaps
+Sitemap: https://portel-viagens.vercel.app/sitemap.xml
