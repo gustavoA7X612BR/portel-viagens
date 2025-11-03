@@ -1,8 +1,8 @@
-📘 Portel Viagens
+# 📘 Portel Viagens
 
 Aplicativo Next.js para exibir horários de viagens fluviais entre Belém e Portel, utilizando Prisma como ORM e hospedado na Vercel.
 
-🌟 Funcionalidades
+## 🌟 Funcionalidades
 
 - Exibição de viagens semanais com horários e navios
 - Relação entre navios e empresas de navegação
