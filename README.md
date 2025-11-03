@@ -10,50 +10,43 @@ Aplicativo Next.js para exibir horários de viagens fluviais entre Belém e Port
 - Possibilidade de revalidar manualmente via API
 - Painel administrativo (em desenvolvimento)
 
-🛠 Tecnologias
+## 🛠 Tecnologias
 
-Next.js 14+ (App Router)
+- Next.js 14+ (App Router)
+- TypeScript
+- Prisma ORM
+- PostgreSQL (Prisma Postgres)
+- Tailwind CSS
+- React Icons
+- ESLint + Prettier
+- Vercel para deploy e analytics
 
-TypeScript
+## ⚡ Instalação
 
-Prisma ORM
-
-PostgreSQL (Vercel Postgres)
-
-Tailwind CSS
-
-React Icons
-
-ESLint + Prettier
-
-Vercel para deploy e analytics
-
-⚡ Instalação
-
-# Clonar o repositório
+### Clonar o repositório
 
 git clone https://github.com/seu-usuario/portel-viagens.git
 cd portel-viagens
 
-# Instalar dependências
+### Instalar dependências
 
 npm install
 
-# Configurar variáveis de ambiente
+### Configurar variáveis de ambiente
 
 cp .env.example .env.local
 
-# Edite .env.local com DATABASE_URL, REVALIDATE_SECRET e NEXT_PUBLIC_SITE_URL
+### Edite .env.local com DATABASE_URL, REVALIDATE_SECRET e NEXT_PUBLIC_SITE_URL
 
-🚀 Desenvolvimento
+## 🚀 Desenvolvimento
 
-# Rodar servidor de desenvolvimento
+### Rodar servidor de desenvolvimento
 
 npm run dev
 
 Acesse: http://localhost:3000
 
-🏗 Prisma
+## 🏗 Prisma
 
 Gerar cliente Prisma:
 
@@ -71,7 +64,7 @@ const trips = await prisma.trip.findMany({
 include: { ship: { include: { company: true } } },
 });
 
-🌐 Deploy na Vercel
+## 🌐 Deploy na Vercel
 
 Crie um projeto na Vercel
 
@@ -85,17 +78,13 @@ REVALIDATE_SECRET → token secreto para revalidar páginas
 
 Deploy automático ao push na branch main
 
-🔄 Revalidação de páginas (ISR)
-
-Automaticamente a cada 4 dias:
-
-export const revalidate = 60 _ 60 _ 24 \* 4; // 4 dias
+## 🔄 Revalidação de páginas (ISR)
 
 Manual via API:
 
 curl "https://portel-viagens.vercel.app/api/revalidate?secret=SEU_TOKEN"
 
-🎨 Estilização
+## 🎨 Estilização
 
 Tailwind CSS com cores personalizadas:
 
@@ -113,7 +102,7 @@ background-color: var(--mainBlue);
 color: var(--foreground);
 }
 
-📊 Analytics
+## 📊 Analytics
 
 Vercel Analytics para medir:
 
@@ -125,14 +114,15 @@ Performance do site
 
 Para rastrear horários de viagem clicados, recomenda-se event tracking com Google Analytics ou log de buscas na API.
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 /app # Rotas e páginas do Next.js
-/lib # Prisma client e helpers
+/lib # Prisma client
+/helpers # funções auxiliares
 /prisma # Schema e migrations
 /public # Assets estáticos
 /styles # Tailwind e CSS global
 
-🤝 Contribuição
+## 🤝 Contribuição
 
 Fork o repositório
 
@@ -144,6 +134,6 @@ Push para a branch: git push origin minha-feature
 
 Abra um Pull Request
 
-📝 Licença
+##  📝 Licença
 
 MIT © Gustavo Monteiro
